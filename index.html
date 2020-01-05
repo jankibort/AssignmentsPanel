@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Wersum</title>
+</head>
+<body>
+<div>
+    <nav class="w-100 navbar navbar-light bg-white shadow-sm">
+        <div class="col-3 col-md-2 col-xl-1">
+            <a class="h2 align-text-bottom" href="#">Wersum</a>
+        </div>
+        <div class="pt-1 col-6 col-md-7 col-xl-10">
+            <a class="h5 align-text-bottom" href="#">Assigments</a>
+        </div>
+        <div class="col-3 col-xl-1 dropdown show">
+                <a class="h5 pt-1 dropdown-toggle align-text-bottom float-right" href="#" id="navbarDropdown" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    User
+                </a>
+            <div class="dropdown-menu shadow pr-1 mr-1" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="row mx-2">
+    <div class="col-4 col-xl-3 p-0">
+        <div class="row ml-1 mr-3">
+            <div class="card shadow-sm">
+                <div class="card-header">
+                    <span class="h4">Resources</span>
+                </div>
+                <div class="row card-body">
+                    <div class="col-12">
+                        <a href="#" class="h5 d-block">Users</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="#" class="h5 d-block">Assignments</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="#" class="h5 d-block">Attachments</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card shadow-sm">
+                <div class="card-header">
+                    <span class="h4">Tools</span>
+                </div>
+                <div class="card-body">
+                    <form action="/contact" method="POST">
+                        <input type="number" name="name_id" placeholder="Id">
+                        <input type="text" name="title" placeholder="Title">
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-8 col-xl-9 p-0">
+        <div class="row ml-3 mr-1">
+            <div class="card shadow-sm">
+                <div class="card-header">
+                    <a href="#" class="h4">Assigments</a>
+                </div>
+                <div class="row card-body d-flex justify-content-between">
+                    <div class="col-6">
+                        <button type="button" id="addition" class="btn btn-success vertical-alignment-center"><i
+                            class="fas fa-plus"></i> Add New
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <div class="input-group mb-3">
+                            <input type="text" class="uneditable-input form-control" placeholder="Search...">
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-secondary"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <table class="table assignments-table">
+                            <tr class="table-title">
+                                <th>Id</th>
+                                <th>Title</th>
+                                <th>Actions</th>
+                            </tr>
+                            <tr class="table-element">
+                                <td class="assignment-id">1</td>
+                                <td class="description">vel tristique massa volutpat eu. Integer mi lectus, hendrerit eget sapien efficitur, tincidunt condimentum nisi. Suspendisse massa elit, pretium dignissim </td>
+                                <td class="assignment-actions">
+                                    <button type="button" class="btn btn-sm btn-info"><i class="fas fa-eye"></i> View
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>
+                                        Edit
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-danger delete-action"><i class="far fa-trash-alt"></i>
+                                        Delete
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <nav aria-label="Page navigation example" class="navbar mx-auto">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
