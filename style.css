@@ -34,14 +34,14 @@ body, html {
     box-shadow: inset 0 1px 1px rgba(108, 117, 125, 0.075), 0 0 8px rgba(108, 117, 125, 0.6) !important;
 }
 
-.assignments-table td:nth-child(1) {
+.assignments-table th:nth-child(1) {
     width: 6%;
 }
 
-.assignments-table td:nth-child(2) {
+.assignments-table th:nth-child(2) {
     width: 60%;
 }
 
-.assignments-table td:nth-child(3) {
+.assignments-table th:nth-child(3) {
     width: 34%;
 }
